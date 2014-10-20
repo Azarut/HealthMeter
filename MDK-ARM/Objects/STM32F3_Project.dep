@@ -1,5 +1,5 @@
 Dependencies for Project 'STM32F3', Target 'Project': (DO NOT MODIFY !)
-F (..\SRC\main.c)(0x5445100E)(-c --cpu Cortex-M4.fp -D__RTX -g -O0 --apcs=interwork -I..\CMSIS\Include -I..\CMSIS\Device\ST\STM32F30x\Include -I..\STD\inc-I F:\WORK\SOURSE\SORCES\STM32F3\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS_RTX\INC-I C:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\6.1.1\Board-I C:\Keil_v5\ARM\PACK\Keil\STM32F3xx_DFP\1.1.0\Device\Include-D_RTE_ -DSTM32F303xC -DUSE_FULL_ASSERT-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+F (..\SRC\main.c)(0x54451456)(-c --cpu Cortex-M4.fp -D__RTX -g -O0 --apcs=interwork -I..\CMSIS\Include -I..\CMSIS\Device\ST\STM32F30x\Include -I..\STD\inc-I F:\WORK\SOURSE\SORCES\STM32F3\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS_RTX\INC-I C:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\6.1.1\Board-I C:\Keil_v5\ARM\PACK\Keil\STM32F3xx_DFP\1.1.0\Device\Include-D_RTE_ -DSTM32F303xC -DUSE_FULL_ASSERT-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
 I (..\CMSIS\Device\ST\STM32F30x\Include\stm32f30x.h)(0x54450E03)
 I (..\CMSIS\Include\core_cm4.h)(0x52D64716)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5419D5BA)
@@ -7,7 +7,7 @@ I (..\CMSIS\Include\core_cmInstr.h)(0x52D64716)
 I (..\CMSIS\Include\core_cmFunc.h)(0x52D64716)
 I (..\CMSIS\Include\core_cm4_simd.h)(0x52D64716)
 I (..\CMSIS\Device\ST\STM32F30x\Include\system_stm32f30x.h)(0x52D64716)
-I (..\SRC\osObjects.h)(0x54450EF4)
+I (..\SRC\osObjects.h)(0x54451456)
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS_RTX\INC\cmsis_os.h)(0x541FD376)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5419D5BA)
 I (C:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\6.1.1\Board\Board_LED.h)(0x53BB5A92)

@@ -29,10 +29,12 @@ osThreadId tid_sample_name;                              // thread id
 osThreadDef (sample_name, osPriorityNormal, 1, 0);       // thread object
 */
 extern void Start_job (void const *argument);          // thread function
+extern void Measure_job (void const *argument);          // thread function
 
 osThreadId tid_Start_job;                              // thread id
+osThreadId tid_Measure_job;                              // thread id
 osThreadDef (Start_job, osPriorityNormal, 1, 0);       // thread object
-
+osThreadDef (Measure_job, osPriorityNormal, 1, 0);       // thread object
 // global 'semaphores' ----------------------------------------------------------
 /* 
 Example:
