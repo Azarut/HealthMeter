@@ -1,0 +1,12 @@
+.\objects\main.o: ..\SRC\main.c
+.\objects\main.o: ..\CMSIS\Device\ST\STM32F30x\Include\stm32f30x.h
+.\objects\main.o: ..\CMSIS\Include\core_cm4.h
+.\objects\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\main.o: ..\CMSIS\Include\core_cmInstr.h
+.\objects\main.o: ..\CMSIS\Include\core_cmFunc.h
+.\objects\main.o: ..\CMSIS\Include\core_cm4_simd.h
+.\objects\main.o: ..\CMSIS\Device\ST\STM32F30x\Include\system_stm32f30x.h
+.\objects\main.o: ..\SRC\osObjects.h
+.\objects\main.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS_RTX\INC\cmsis_os.h
+.\objects\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\objects\main.o: C:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\6.1.1\Board\Board_LED.h

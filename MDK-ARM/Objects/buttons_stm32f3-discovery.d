@@ -1,0 +1,9 @@
+.\objects\buttons_stm32f3-discovery.o: C:\Keil_v5\ARM\PACK\Keil\STM32F3xx_DFP\1.1.0\Boards\ST\STM32F3-Discovery\Common\Buttons_STM32F3-Discovery.c
+.\objects\buttons_stm32f3-discovery.o: ..\CMSIS\Device\ST\STM32F30x\Include\stm32f30x.h
+.\objects\buttons_stm32f3-discovery.o: ..\CMSIS\Include\core_cm4.h
+.\objects\buttons_stm32f3-discovery.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\buttons_stm32f3-discovery.o: ..\CMSIS\Include\core_cmInstr.h
+.\objects\buttons_stm32f3-discovery.o: ..\CMSIS\Include\core_cmFunc.h
+.\objects\buttons_stm32f3-discovery.o: ..\CMSIS\Include\core_cm4_simd.h
+.\objects\buttons_stm32f3-discovery.o: ..\CMSIS\Device\ST\STM32F30x\Include\system_stm32f30x.h
+.\objects\buttons_stm32f3-discovery.o: C:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\6.1.1\Board\Board_Buttons.h

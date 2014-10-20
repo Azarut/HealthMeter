@@ -1,0 +1,1180 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.12.0.0
+Copyright (C) 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: 1 Microsoft, Microsoft, LIC=P6F63-A0USJ-ZEYH2-9YH1V-E5BIZ-K8TWT
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Professional  Version: 5.12.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.05 (build 41)
+Assembler:       Armasm.exe V5.05 (build 41)
+Linker/Locator:  ArmLink.exe V5.05 (build 41)
+Library Manager: ArmAr.exe V5.05 (build 41)
+Hex Converter:   FromElf.exe V5.05 (build 41)
+CPU DLL:         SARMCM3.DLL V5.12.0.0
+Dialog DLL:      DCM.DLL V1.13.0.0
+Target DLL:      UL2CM3.DLL V1.153.0.0
+Dialog DLL:      TCM.DLL V1.14.2.0
+ 
+<h2>Project:</h2>
+F:\WORK\SOURSE\SORCES\STM32F3\MDK-ARM\STM32F3.uvproj
+Project File Date:  10/20/2014
+
+<h2>Output:</h2>
+Build target 'Project'
+".\Objects\STM32F3.axf" - 0 Error(s), 0 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.4.2.0.pack
+                ::CMSIS:RTOS:1.0 (API)
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: RTOS Version: 1.0
+   * Component: CORE Version: 3.40.0
+   * Component: Keil RTX Version: 4.75.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.MDK-Middleware.6.1.1.pack
+                ::Board Support:LED:1.00 (API)
+                Keil MDK-ARM Professional Middleware for ARM Cortex-M based devices
+   * Component: LED Version: 1.00
+   * Component: Buttons Version: 1.00
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F3xx_DFP.1.1.0.pack
+                Keil::Device:Startup:1.2.0
+                STMicroelectronics STM32F3 Series Device Support and Examples
+   * Component: Startup Version: 1.2.0
+   * Component: LED Version: 1.0.0
+   * Component: Buttons Version: 1.0.0
+
+<h2>Collection of Component include folders:</h2>
+  F:\WORK\SOURSE\SORCES\STM32F3\MDK-ARM\RTE
+  C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include
+  C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS_RTX\INC
+  C:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\6.1.1\Board
+  C:\Keil_v5\ARM\PACK\Keil\STM32F3xx_DFP\1.1.0\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ::CMSIS:RTOS:1.0 (API)
+
+   * Component: ARM::CMSIS:CORE:3.40.0
+      Source file:   CMSIS\UserCodeTemplates\ARM\ITM_Retarget.c
+
+   * Component: ARM::CMSIS:RTOS:Keil RTX:4.75.0
+      Include file:  CMSIS_RTX\INC\cmsis_os.h
+      Source file:   CMSIS_RTX\Templates\RTX_Conf_CM.c
+      Include file:  CMSIS_RTX\UserCodeTemplates\osObjects.h
+      Source file:   CMSIS_RTX\UserCodeTemplates\main.c
+      Source file:   CMSIS_RTX\UserCodeTemplates\MailQueue.c
+      Source file:   CMSIS_RTX\UserCodeTemplates\MemPool.c
+      Source file:   CMSIS_RTX\UserCodeTemplates\MsgQueue.c
+      Source file:   CMSIS_RTX\UserCodeTemplates\Mutex.c
+      Source file:   CMSIS_RTX\UserCodeTemplates\Semaphore.c
+      Source file:   CMSIS_RTX\UserCodeTemplates\Thread.c
+      Source file:   CMSIS_RTX\UserCodeTemplates\Timer.c
+      Source file:   CMSIS_RTX\SRC\ARM\SVC_Table.s
+      Library file:  CMSIS_RTX\LIB\ARM\RTX_CM4.lib
+
+   * Component: ::Board Support:LED:1.00 (API)
+      Include file:  Board\Board_LED.h
+
+   * Component: ::Board Support:Buttons:1.00 (API)
+      Include file:  Board\Board_Buttons.h
+
+   * Component: Keil::Device:Startup:1.2.0
+      Source file:   Device\Source\ARM\startup_stm32f303xc.s
+      Source file:   Device\Source\system_stm32f30x.c
+      Source file:   Device\Source\ARM\STM32F3xx_OPT.s
+
+   * Component: Keil.STM32F3-Discovery::Board Support:LED:1.0.0
+      Source file:   Boards\ST\STM32F3-Discovery\Common\LED_STM32F3-Discovery.c
+
+   * Component: Keil.STM32F3-Discovery::Board Support:Buttons:1.0.0
+      Source file:   Boards\ST\STM32F3-Discovery\Common\Buttons_STM32F3-Discovery.c
+ons:1.0.0
+      Source file:   Boards\ST\STM32F3-Discovery\Common\Buttons_STM32F3-Discovery.c
+
+   * Component: Keil.STM32F3-Discovery::Board Support:Buttons:1.0.0
+      Source file:   Boards\ST\STM32F3-Discovery\Common\Buttons_STM32F3-Discovery.c
+d\Board_LED.h
+
+   * Component: ::Board Support:Buttons:1.00 (API)
+      Include file:  Board\Board_Buttons.h
+
+   * Component: Keil::Device:Startup:1.2.0
+      Source file:   Device\Source\ARM\startup_stm32f303xc.s
+      Source file:   Device\Source\system_stm32f30x.c
+      Source file:   Device\Source\ARM\STM32F3xx_OPT.s
+
+   * Component: Keil.STM32F3-Discovery::Board Support:LED:1.0.0
+      Source file:   Boards\ST\STM32F3-Discovery\Common\LED_STM32F3-Discovery.c
+
+   * Component: Keil.STM32F3-Discovery::Board Support:Buttons:1.0.0
+      Source file:   Boards\ST\STM32F3-Discovery\Common\Buttons_STM32F3-Discovery.c
+assert_param(IS_ADC_ALL_PERIPH(ADCx));
+..\STD\src\stm32f30x_adc.c(1312): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_ADC_ALL_PERIPH(ADCx));
+..\STD\src\stm32f30x_adc.c(1329): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_ADC_ALL_PERIPH(ADCx));
+..\STD\src\stm32f30x_adc.c(1344): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_ADC_ALL_PERIPH(ADCx));
+..\STD\src\stm32f30x_adc.c(1368): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_ADC_ALL_PERIPH(ADCx));
+..\STD\src\stm32f30x_adc.c(1388): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_ADC_ALL_PERIPH(ADCx));
+..\STD\src\stm32f30x_adc.c(1413): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_ADC_ALL_PERIPH(ADCx));
+..\STD\src\stm32f30x_adc.c(1435): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_ADC_ALL_PERIPH(ADCx));
+..\STD\src\stm32f30x_adc.c(1454): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_ADC_ALL_PERIPH(ADCx));
+..\STD\src\stm32f30x_adc.c(1500): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_ADC_ALL_PERIPH(ADCx));
+..\STD\src\stm32f30x_adc.c(1543): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_ADC_ALL_PERIPH(ADCx));
+..\STD\src\stm32f30x_adc.c(1586): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_ADC_ALL_PERIPH(ADCx));
+..\STD\src\stm32f30x_adc.c(1629): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_ADC_ALL_PERIPH(ADCx));
+..\STD\src\stm32f30x_adc.c(1652): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_ADC_ALL_PERIPH(ADCx));
+..\STD\src\stm32f30x_adc.c(1677): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_ADC_ALL_PERIPH(ADCx));
+..\STD\src\stm32f30x_adc.c(1702): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_ADC_ALL_PERIPH(ADCx));
+..\STD\src\stm32f30x_adc.c(1727): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_ADC_ALL_PERIPH(ADCx));
+..\STD\src\stm32f30x_adc.c(1778): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_ADC_DMA_PERIPH(ADCx));
+..\STD\src\stm32f30x_adc.c(1802): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_ADC_DMA_PERIPH(ADCx));
+..\STD\src\stm32f30x_adc.c(1876): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_ADC_ALL_PERIPH(ADCx));
+..\STD\src\stm32f30x_adc.c(1914): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_ADC_ALL_PERIPH(ADCx));
+..\STD\src\stm32f30x_adc.c(1929): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_ADC_ALL_PERIPH(ADCx));
+..\STD\src\stm32f30x_adc.c(1944): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_ADC_ALL_PERIPH(ADCx));
+..\STD\src\stm32f30x_adc.c(1972): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_ADC_ALL_PERIPH(ADCx));
+..\STD\src\stm32f30x_adc.c(1998): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_ADC_ALL_PERIPH(ADCx));
+..\STD\src\stm32f30x_adc.c(2028): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_ADC_ALL_PERIPH(ADCx));
+..\STD\src\stm32f30x_adc.c(2159): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_ADC_ALL_PERIPH(ADCx));
+..\STD\src\stm32f30x_adc.c(2197): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_ADC_ALL_PERIPH(ADCx));
+..\STD\src\stm32f30x_adc.c(2236): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_ADC_ALL_PERIPH(ADCx));
+..\STD\src\stm32f30x_adc.c(2277): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_ADC_ALL_PERIPH(ADCx));
+..\STD\src\stm32f30x_adc.c(2335): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_ADC_ALL_PERIPH(ADCx));
+..\STD\src\stm32f30x_adc.c(2373): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_ADC_ALL_PERIPH(ADCx));
+..\STD\src\stm32f30x_adc.c(2411): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_ADC_ALL_PERIPH(ADCx));
+..\STD\src\stm32f30x_adc.c: 60 warnings, 0 errors
+compiling stm32f30x_can.c...
+..\STD\src\stm32f30x_can.c(155): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_CAN_ALL_PERIPH(CANx));
+..\STD\src\stm32f30x_can.c(177): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_CAN_ALL_PERIPH(CANx));
+..\STD\src\stm32f30x_can.c(313): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_CAN_FILTER_NUMBER(CAN_FilterInitStruct->CAN_FilterNumber));
+..\STD\src\stm32f30x_can.c(446): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_CAN_BANKNUMBER(CAN_BankNumber));
+..\STD\src\stm32f30x_can.c(471): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_CAN_ALL_PERIPH(CANx));
+..\STD\src\stm32f30x_can.c(500): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_CAN_ALL_PERIPH(CANx));
+..\STD\src\stm32f30x_can.c(555): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_CAN_ALL_PERIPH(CANx));
+..\STD\src\stm32f30x_can.c(628): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_CAN_ALL_PERIPH(CANx));
+..\STD\src\stm32f30x_can.c(680): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_CAN_ALL_PERIPH(CANx));
+..\STD\src\stm32f30x_can.c(727): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_CAN_ALL_PERIPH(CANx));
+..\STD\src\stm32f30x_can.c(776): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_CAN_ALL_PERIPH(CANx));
+..\STD\src\stm32f30x_can.c(800): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_CAN_ALL_PERIPH(CANx));
+..\STD\src\stm32f30x_can.c(854): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_CAN_ALL_PERIPH(CANx));
+..\STD\src\stm32f30x_can.c(932): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_CAN_ALL_PERIPH(CANx));
+..\STD\src\stm32f30x_can.c(958): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_CAN_ALL_PERIPH(CANx));
+..\STD\src\stm32f30x_can.c(1019): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_CAN_ALL_PERIPH(CANx));
+..\STD\src\stm32f30x_can.c(1044): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_CAN_ALL_PERIPH(CANx));
+..\STD\src\stm32f30x_can.c(1064): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_CAN_ALL_PERIPH(CANx));
+..\STD\src\stm32f30x_can.c(1221): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_CAN_ALL_PERIPH(CANx));
+..\STD\src\stm32f30x_can.c(1263): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_CAN_ALL_PERIPH(CANx));
+..\STD\src\stm32f30x_can.c(1362): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_CAN_ALL_PERIPH(CANx));
+..\STD\src\stm32f30x_can.c(1422): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_CAN_ALL_PERIPH(CANx));
+..\STD\src\stm32f30x_can.c(1525): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_CAN_ALL_PERIPH(CANx));
+..\STD\src\stm32f30x_can.c: 23 warnings, 0 errors
+compiling stm32f30x_comp.c...
+..\STD\src\stm32f30x_comp.c(246): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_COMP_ALL_PERIPH(COMP_Selection));
+..\STD\src\stm32f30x_comp.c(313): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_COMP_ALL_PERIPH(COMP_Selection));
+..\STD\src\stm32f30x_comp.c(343): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_FUNCTIONAL_STATE(NewState));
+..\STD\src\stm32f30x_comp.c(381): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_COMP_ALL_PERIPH(COMP_Selection));
+..\STD\src\stm32f30x_comp.c(436): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_FUNCTIONAL_STATE(NewState));
+..\STD\src\stm32f30x_comp.c(481): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_COMP_ALL_PERIPH(COMP_Selection));
+..\STD\src\stm32f30x_comp.c: 6 warnings, 0 errors
+compiling stm32f30x_crc.c...
+..\STD\src\stm32f30x_crc.c(135): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_CRC_POL_SIZE(CRC_PolSize));
+..\STD\src\stm32f30x_crc.c(164): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_CRC_REVERSE_INPUT_DATA(CRC_ReverseInputData));
+..\STD\src\stm32f30x_crc.c(188): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_FUNCTIONAL_STATE(NewState));
+..\STD\src\stm32f30x_crc.c: 3 warnings, 0 errors
+compiling stm32f30x_dac.c...
+..\STD\src\stm32f30x_dac.c(182): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_DAC_TRIGGER(DAC_InitStruct->DAC_Trigger));
+..\STD\src\stm32f30x_dac.c(240): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_DAC_CHANNEL(DAC_Channel));
+..\STD\src\stm32f30x_dac.c(268): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_DAC_CHANNEL(DAC_Channel));
+..\STD\src\stm32f30x_dac.c(292): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_FUNCTIONAL_STATE(NewState));
+..\STD\src\stm32f30x_dac.c(323): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_DAC_CHANNEL(DAC_Channel));
+..\STD\src\stm32f30x_dac.c(354): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_DAC_ALIGN(DAC_Align));
+..\STD\src\stm32f30x_dac.c(379): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_DAC_ALIGN(DAC_Align));
+..\STD\src\stm32f30x_dac.c(407): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_DAC_ALIGN(DAC_Align));
+..\STD\src\stm32f30x_dac.c(441): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_DAC_CHANNEL(DAC_Channel));
+..\STD\src\stm32f30x_dac.c(484): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_DAC_CHANNEL(DAC_Channel));
+..\STD\src\stm32f30x_dac.c(532): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_DAC_CHANNEL(DAC_Channel));
+..\STD\src\stm32f30x_dac.c(565): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_DAC_CHANNEL(DAC_Channel));
+..\STD\src\stm32f30x_dac.c(597): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_DAC_CHANNEL(DAC_Channel));
+..\STD\src\stm32f30x_dac.c(623): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_DAC_CHANNEL(DAC_Channel));
+..\STD\src\stm32f30x_dac.c(658): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_DAC_CHANNEL(DAC_Channel));
+..\STD\src\stm32f30x_dac.c: 15 warnings, 0 errors
+compiling stm32f30x_dbgmcu.c...
+..\STD\src\stm32f30x_dbgmcu.c(118): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_DBGMCU_PERIPH(DBGMCU_Periph));
+..\STD\src\stm32f30x_dbgmcu.c(155): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_DBGMCU_APB1PERIPH(DBGMCU_Periph));
+..\STD\src\stm32f30x_dbgmcu.c(184): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_DBGMCU_APB2PERIPH(DBGMCU_Periph));
+..\STD\src\stm32f30x_dbgmcu.c: 3 warnings, 0 errors
+compiling stm32f30x_dma.c...
+..\STD\src\stm32f30x_dma.c(144): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_DMA_ALL_PERIPH(DMAy_Channelx));
+..\STD\src\stm32f30x_dma.c(240): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_DMA_ALL_PERIPH(DMAy_Channelx));
+..\STD\src\stm32f30x_dma.c(331): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_DMA_ALL_PERIPH(DMAy_Channelx));
+..\STD\src\stm32f30x_dma.c(390): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_DMA_ALL_PERIPH(DMAy_Channelx));
+..\STD\src\stm32f30x_dma.c(408): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_DMA_ALL_PERIPH(DMAy_Channelx));
+..\STD\src\stm32f30x_dma.c(484): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_DMA_ALL_PERIPH(DMAy_Channelx));
+..\STD\src\stm32f30x_dma.c(567): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_DMA_GET_FLAG(DMAy_FLAG));
+..\STD\src\stm32f30x_dma.c(660): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_DMA_CLEAR_FLAG(DMAy_FLAG));
+..\STD\src\stm32f30x_dma.c(742): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_DMA_GET_IT(DMAy_IT));
+..\STD\src\stm32f30x_dma.c(835): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_DMA_CLEAR_IT(DMAy_IT));
+..\STD\src\stm32f30x_dma.c: 10 warnings, 0 errors
+compiling stm32f30x_exti.c...
+..\STD\src\stm32f30x_exti.c(159): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_EXTI_MODE(EXTI_InitStruct->EXTI_Mode));
+..\STD\src\stm32f30x_exti.c(231): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_EXTI_LINE_EXT(EXTI_Line));
+..\STD\src\stm32f30x_exti.c(267): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_GET_EXTI_LINE(EXTI_Line));
+..\STD\src\stm32f30x_exti.c(289): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_EXTI_LINE_EXT(EXTI_Line));
+..\STD\src\stm32f30x_exti.c(306): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_GET_EXTI_LINE(EXTI_Line));
+..\STD\src\stm32f30x_exti.c(331): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_EXTI_LINE_EXT(EXTI_Line));
+..\STD\src\stm32f30x_exti.c: 6 warnings, 0 errors
+compiling stm32f30x_flash.c...
+..\STD\src\stm32f30x_flash.c(136): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_FLASH_LATENCY(FLASH_Latency));
+..\STD\src\stm32f30x_flash.c(160): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_FUNCTIONAL_STATE(NewState));
+..\STD\src\stm32f30x_flash.c(181): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_FUNCTIONAL_STATE(NewState));
+..\STD\src\stm32f30x_flash.c(266): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_FLASH_PROGRAM_ADDRESS(Page_Address));
+..\STD\src\stm32f30x_flash.c(340): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_FLASH_PROGRAM_ADDRESS(Address));
+..\STD\src\stm32f30x_flash.c(397): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_FLASH_PROGRAM_ADDRESS(Address));
+..\STD\src\stm32f30x_flash.c(599): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_OB_WRP(OB_WRP));
+..\STD\src\stm32f30x_flash.c(656): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_OB_RDP(OB_RDP));
+..\STD\src\stm32f30x_flash.c(721): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_OB_IWDG_SOURCE(OB_IWDG));
+..\STD\src\stm32f30x_flash.c(765): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_OB_BOOT1(OB_BOOT1));
+..\STD\src\stm32f30x_flash.c(807): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_OB_VDDA_ANALOG(OB_VDDA_ANALOG));
+..\STD\src\stm32f30x_flash.c(849): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_OB_SRAM_PARITY(OB_SRAM_Parity));
+..\STD\src\stm32f30x_flash.c(938): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_OB_DATA_ADDRESS(Address));
+..\STD\src\stm32f30x_flash.c(1030): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_FLASH_IT(FLASH_IT)); 
+..\STD\src\stm32f30x_flash.c(1060): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_FLASH_GET_FLAG(FLASH_FLAG));
+..\STD\src\stm32f30x_flash.c(1086): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_FLASH_CLEAR_FLAG(FLASH_FLAG));
+..\STD\src\stm32f30x_flash.c: 16 warnings, 0 errors
+compiling stm32f30x_gpio.c...
+..\STD\src\stm32f30x_gpio.c(124): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_GPIO_ALL_PERIPH(GPIOx));
+..\STD\src\stm32f30x_gpio.c(179): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_GPIO_ALL_PERIPH(GPIOx));
+..\STD\src\stm32f30x_gpio.c(255): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_GPIO_LIST_PERIPH(GPIOx));
+..\STD\src\stm32f30x_gpio.c(301): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_GPIO_ALL_PERIPH(GPIOx));
+..\STD\src\stm32f30x_gpio.c(323): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_GPIO_ALL_PERIPH(GPIOx));
+..\STD\src\stm32f30x_gpio.c(342): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_GPIO_ALL_PERIPH(GPIOx));
+..\STD\src\stm32f30x_gpio.c(364): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_GPIO_ALL_PERIPH(GPIOx));
+..\STD\src\stm32f30x_gpio.c(381): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_GPIO_ALL_PERIPH(GPIOx));
+..\STD\src\stm32f30x_gpio.c(399): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_GPIO_ALL_PERIPH(GPIOx));
+..\STD\src\stm32f30x_gpio.c(421): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_GPIO_ALL_PERIPH(GPIOx));
+..\STD\src\stm32f30x_gpio.c(445): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_GPIO_ALL_PERIPH(GPIOx));
+..\STD\src\stm32f30x_gpio.c(504): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_GPIO_ALL_PERIPH(GPIOx));
+..\STD\src\stm32f30x_gpio.c: 12 warnings, 0 errors
+compiling stm32f30x_i2c.c...
+..\STD\src\stm32f30x_i2c.c(148): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+..\STD\src\stm32f30x_i2c.c(179): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+..\STD\src\stm32f30x_i2c.c(282): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+..\STD\src\stm32f30x_i2c.c(305): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+..\STD\src\stm32f30x_i2c.c(337): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+..\STD\src\stm32f30x_i2c.c(363): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+..\STD\src\stm32f30x_i2c.c(388): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+..\STD\src\stm32f30x_i2c.c(413): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+..\STD\src\stm32f30x_i2c.c(449): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+..\STD\src\stm32f30x_i2c.c(477): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+..\STD\src\stm32f30x_i2c.c(502): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+..\STD\src\stm32f30x_i2c.c(529): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+..\STD\src\stm32f30x_i2c.c(556): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+..\STD\src\stm32f30x_i2c.c(621): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+..\STD\src\stm32f30x_i2c.c(646): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+..\STD\src\stm32f30x_i2c.c(672): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+..\STD\src\stm32f30x_i2c.c(699): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+..\STD\src\stm32f30x_i2c.c(725): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+..\STD\src\stm32f30x_i2c.c(750): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+..\STD\src\stm32f30x_i2c.c(777): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+..\STD\src\stm32f30x_i2c.c(802): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+..\STD\src\stm32f30x_i2c.c(825): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+..\STD\src\stm32f30x_i2c.c(842): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+..\STD\src\stm32f30x_i2c.c(885): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+..\STD\src\stm32f30x_i2c.c(954): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+..\STD\src\stm32f30x_i2c.c(979): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+..\STD\src\stm32f30x_i2c.c(1004): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+..\STD\src\stm32f30x_i2c.c(1030): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+..\STD\src\stm32f30x_i2c.c(1057): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+..\STD\src\stm32f30x_i2c.c(1084): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+..\STD\src\stm32f30x_i2c.c(1110): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+..\STD\src\stm32f30x_i2c.c(1135): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+..\STD\src\stm32f30x_i2c.c(1158): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+..\STD\src\stm32f30x_i2c.c(1206): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+..\STD\src\stm32f30x_i2c.c(1247): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+..\STD\src\stm32f30x_i2c.c(1261): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+..\STD\src\stm32f30x_i2c.c(1304): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+..\STD\src\stm32f30x_i2c.c(1427): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+..\STD\src\stm32f30x_i2c.c(1468): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+..\STD\src\stm32f30x_i2c.c(1502): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+..\STD\src\stm32f30x_i2c.c(1562): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+..\STD\src\stm32f30x_i2c.c: 41 warnings, 0 errors
+compiling stm32f30x_iwdg.c...
+..\STD\src\stm32f30x_iwdg.c(143): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_IWDG_WRITE_ACCESS(IWDG_WriteAccess));
+..\STD\src\stm32f30x_iwdg.c(163): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_IWDG_PRESCALER(IWDG_Prescaler));
+..\STD\src\stm32f30x_iwdg.c(176): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_IWDG_RELOAD(Reload));
+..\STD\src\stm32f30x_iwdg.c(200): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_IWDG_WINDOW_VALUE(WindowValue));
+..\STD\src\stm32f30x_iwdg.c(259): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_IWDG_FLAG(IWDG_FLAG));
+..\STD\src\stm32f30x_iwdg.c: 5 warnings, 0 errors
+compiling stm32f30x_misc.c...
+..\STD\src\stm32f30x_misc.c(103): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_NVIC_PRIORITY_GROUP(NVIC_PriorityGroup));
+..\STD\src\stm32f30x_misc.c(123): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_FUNCTIONAL_STATE(NVIC_InitStruct->NVIC_IRQChannelCmd));
+..\STD\src\stm32f30x_misc.c(164): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_NVIC_VECTTAB(NVIC_VectTab));
+..\STD\src\stm32f30x_misc.c(183): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_NVIC_LP(LowPowerMode));
+..\STD\src\stm32f30x_misc.c(207): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_SYSTICK_CLK_SOURCE(SysTick_CLKSource));
+..\STD\src\stm32f30x_misc.c: 5 warnings, 0 errors
+compiling stm32f30x_opamp.c...
+..\STD\src\stm32f30x_opamp.c(169): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_OPAMP_ALL_PERIPH(OPAMP_Selection));
+..\STD\src\stm32f30x_opamp.c(212): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_OPAMP_ALL_PERIPH(OPAMP_Selection));
+..\STD\src\stm32f30x_opamp.c(244): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_OPAMP_ALL_PERIPH(OPAMP_Selection));
+..\STD\src\stm32f30x_opamp.c(274): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_OPAMP_ALL_PERIPH(OPAMP_Selection));
+..\STD\src\stm32f30x_opamp.c(300): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_OPAMP_ALL_PERIPH(OPAMP_Selection));
+..\STD\src\stm32f30x_opamp.c(336): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_OPAMP_ALL_PERIPH(OPAMP_Selection));
+..\STD\src\stm32f30x_opamp.c(367): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_OPAMP_ALL_PERIPH(OPAMP_Selection));
+..\STD\src\stm32f30x_opamp.c(396): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_OPAMP_ALL_PERIPH(OPAMP_Selection));
+..\STD\src\stm32f30x_opamp.c(429): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_OPAMP_ALL_PERIPH(OPAMP_Selection));
+..\STD\src\stm32f30x_opamp.c(461): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_OPAMP_ALL_PERIPH(OPAMP_Selection));
+..\STD\src\stm32f30x_opamp.c(489): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_OPAMP_ALL_PERIPH(OPAMP_Selection));
+..\STD\src\stm32f30x_opamp.c(520): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_OPAMP_ALL_PERIPH(OPAMP_Selection));
+..\STD\src\stm32f30x_opamp.c(565): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_OPAMP_ALL_PERIPH(OPAMP_Selection));
+..\STD\src\stm32f30x_opamp.c: 13 warnings, 0 errors
+compiling stm32f30x_pwr.c...
+..\STD\src\stm32f30x_pwr.c(117): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_FUNCTIONAL_STATE(NewState));
+..\STD\src\stm32f30x_pwr.c(163): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_PWR_PVD_LEVEL(PWR_PVDLevel));
+..\STD\src\stm32f30x_pwr.c(186): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_FUNCTIONAL_STATE(NewState));
+..\STD\src\stm32f30x_pwr.c(222): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_PWR_WAKEUP_PIN(PWR_WakeUpPin));  
+..\STD\src\stm32f30x_pwr.c(354): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_PWR_SLEEP_ENTRY(PWR_SLEEPEntry));
+..\STD\src\stm32f30x_pwr.c(396): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_PWR_REGULATOR(PWR_Regulator));
+..\STD\src\stm32f30x_pwr.c(492): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_PWR_GET_FLAG(PWR_FLAG));
+..\STD\src\stm32f30x_pwr.c(517): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_PWR_CLEAR_FLAG(PWR_FLAG));
+..\STD\src\stm32f30x_pwr.c: 8 warnings, 0 errors
+compiling stm32f30x_rcc.c...
+..\STD\src\stm32f30x_rcc.c(239): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_RCC_HSE(RCC_HSE));
+..\STD\src\stm32f30x_rcc.c(300): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_RCC_HSI_CALIBRATION_VALUE(HSICalibrationValue));
+..\STD\src\stm32f30x_rcc.c(332): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_FUNCTIONAL_STATE(NewState));
+..\STD\src\stm32f30x_rcc.c(357): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_RCC_LSE(RCC_LSE));
+..\STD\src\stm32f30x_rcc.c(383): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_RCC_LSE_DRIVE(RCC_LSEDrive));
+..\STD\src\stm32f30x_rcc.c(407): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_FUNCTIONAL_STATE(NewState));
+..\STD\src\stm32f30x_rcc.c(430): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_RCC_PLL_SOURCE(RCC_PLLSource));
+..\STD\src\stm32f30x_rcc.c(454): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_FUNCTIONAL_STATE(NewState));
+..\STD\src\stm32f30x_rcc.c(471): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_RCC_PREDIV1(RCC_PREDIV1_Div));
+..\STD\src\stm32f30x_rcc.c(498): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_FUNCTIONAL_STATE(NewState));
+..\STD\src\stm32f30x_rcc.c(521): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_RCC_MCO_SOURCE(RCC_MCOSource));
+..\STD\src\stm32f30x_rcc.c(629): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_RCC_SYSCLK_SOURCE(RCC_SYSCLKSource));
+..\STD\src\stm32f30x_rcc.c(682): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_RCC_HCLK(RCC_SYSCLK));
+..\STD\src\stm32f30x_rcc.c(713): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_RCC_PCLK(RCC_HCLK));
+..\STD\src\stm32f30x_rcc.c(743): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_RCC_PCLK(RCC_HCLK));
+..\STD\src\stm32f30x_rcc.c(1111): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_RCC_ADCCLK(RCC_PLLCLK));
+..\STD\src\stm32f30x_rcc.c(1144): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_RCC_I2CCLK(RCC_I2CCLK));
+..\STD\src\stm32f30x_rcc.c(1180): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_RCC_TIMCLK(RCC_TIMCLK));
+..\STD\src\stm32f30x_rcc.c(1214): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_RCC_USARTCLK(RCC_USARTCLK));
+..\STD\src\stm32f30x_rcc.c(1257): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_RCC_USBCLK_SOURCE(RCC_USBCLKSource));
+..\STD\src\stm32f30x_rcc.c(1288): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_RCC_RTCCLK_SOURCE(RCC_RTCCLKSource));
+..\STD\src\stm32f30x_rcc.c(1307): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_RCC_I2SCLK_SOURCE(RCC_I2SCLKSource));
+..\STD\src\stm32f30x_rcc.c(1323): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_FUNCTIONAL_STATE(NewState));
+..\STD\src\stm32f30x_rcc.c(1339): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_FUNCTIONAL_STATE(NewState));
+..\STD\src\stm32f30x_rcc.c(1372): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_RCC_AHB_PERIPH(RCC_AHBPeriph));
+..\STD\src\stm32f30x_rcc.c(1407): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_RCC_APB2_PERIPH(RCC_APB2Periph));
+..\STD\src\stm32f30x_rcc.c(1452): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_RCC_APB1_PERIPH(RCC_APB1Periph));
+..\STD\src\stm32f30x_rcc.c(1485): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_RCC_AHB_RST_PERIPH(RCC_AHBPeriph));
+..\STD\src\stm32f30x_rcc.c(1517): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_RCC_APB2_PERIPH(RCC_APB2Periph));
+..\STD\src\stm32f30x_rcc.c(1559): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_RCC_APB1_PERIPH(RCC_APB1Periph));
+..\STD\src\stm32f30x_rcc.c(1610): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_RCC_IT(RCC_IT));
+..\STD\src\stm32f30x_rcc.c(1651): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_RCC_FLAG(RCC_FLAG));
+..\STD\src\stm32f30x_rcc.c(1718): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_RCC_GET_IT(RCC_IT));
+..\STD\src\stm32f30x_rcc.c(1748): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_RCC_CLEAR_IT(RCC_IT));
+..\STD\src\stm32f30x_rcc.c: 34 warnings, 0 errors
+compiling stm32f30x_rtc.c...
+..\STD\src\stm32f30x_rtc.c(416): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_RTC_HOUR_FORMAT(RTC_InitStruct->RTC_HourFormat));
+..\STD\src\stm32f30x_rtc.c(482): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_FUNCTIONAL_STATE(NewState));
+..\STD\src\stm32f30x_rtc.c(629): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_FUNCTIONAL_STATE(NewState));
+..\STD\src\stm32f30x_rtc.c(675): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_FUNCTIONAL_STATE(NewState));
+..\STD\src\stm32f30x_rtc.c(732): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_RTC_FORMAT(RTC_Format));
+..\STD\src\stm32f30x_rtc.c(854): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_RTC_FORMAT(RTC_Format));
+..\STD\src\stm32f30x_rtc.c(913): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_RTC_FORMAT(RTC_Format));
+..\STD\src\stm32f30x_rtc.c(1022): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_RTC_FORMAT(RTC_Format));
+..\STD\src\stm32f30x_rtc.c(1082): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_RTC_FORMAT(RTC_Format));
+..\STD\src\stm32f30x_rtc.c(1223): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_RTC_FORMAT(RTC_Format));
+..\STD\src\stm32f30x_rtc.c(1279): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_RTC_CMD_ALARM(RTC_Alarm));
+..\STD\src\stm32f30x_rtc.c(1371): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_RTC_ALARM(RTC_Alarm));
+..\STD\src\stm32f30x_rtc.c(1458): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_RTC_WAKEUP_CLOCK(RTC_WakeUpClock));
+..\STD\src\stm32f30x_rtc.c(1485): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_RTC_WAKEUP_COUNTER(RTC_WakeUpCounter));
+..\STD\src\stm32f30x_rtc.c(1522): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_FUNCTIONAL_STATE(NewState));
+..\STD\src\stm32f30x_rtc.c(1594): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_RTC_DAYLIGHT_SAVING(RTC_DayLightSaving));
+..\STD\src\stm32f30x_rtc.c(1659): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_RTC_OUTPUT(RTC_Output));
+..\STD\src\stm32f30x_rtc.c(1702): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_FUNCTIONAL_STATE(NewState));
+..\STD\src\stm32f30x_rtc.c(1734): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_RTC_CALIB_OUTPUT(RTC_CalibOutput));
+..\STD\src\stm32f30x_rtc.c(1775): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_RTC_SMOOTH_CALIB_PERIOD(RTC_SmoothCalibPeriod));
+..\STD\src\stm32f30x_rtc.c(1848): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_RTC_TIMESTAMP_EDGE(RTC_TimeStampEdge));
+..\STD\src\stm32f30x_rtc.c(1893): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_RTC_FORMAT(RTC_Format));
+..\STD\src\stm32f30x_rtc.c(1972): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_RTC_TAMPER(RTC_Tamper)); 
+..\STD\src\stm32f30x_rtc.c(2002): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_RTC_TAMPER(RTC_Tamper));  
+..\STD\src\stm32f30x_rtc.c(2033): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_RTC_TAMPER_FILTER(RTC_TamperFilter));
+..\STD\src\stm32f30x_rtc.c(2067): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_RTC_TAMPER_SAMPLING_FREQ(RTC_TamperSamplingFreq));
+..\STD\src\stm32f30x_rtc.c(2090): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_RTC_TAMPER_PRECHARGE_DURATION(RTC_TamperPrechargeDuration));
+..\STD\src\stm32f30x_rtc.c(2110): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_FUNCTIONAL_STATE(NewState));
+..\STD\src\stm32f30x_rtc.c(2133): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_FUNCTIONAL_STATE(NewState));
+..\STD\src\stm32f30x_rtc.c(2176): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_RTC_BKP(RTC_BKP_DR));
+..\STD\src\stm32f30x_rtc.c(2197): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_RTC_BKP(RTC_BKP_DR));
+..\STD\src\stm32f30x_rtc.c(2235): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_RTC_OUTPUT_TYPE(RTC_OutputType));
+..\STD\src\stm32f30x_rtc.c(2276): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_RTC_SHIFT_ADD1S(RTC_ShiftAdd1S));
+..\STD\src\stm32f30x_rtc.c(2389): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_RTC_CONFIG_IT(RTC_IT));
+..\STD\src\stm32f30x_rtc.c(2442): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_RTC_GET_FLAG(RTC_FLAG));
+..\STD\src\stm32f30x_rtc.c(2477): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_RTC_CLEAR_FLAG(RTC_FLAG));
+..\STD\src\stm32f30x_rtc.c(2502): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_RTC_GET_IT(RTC_IT));
+..\STD\src\stm32f30x_rtc.c(2543): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_RTC_CLEAR_IT(RTC_IT));
+..\STD\src\stm32f30x_rtc.c: 38 warnings, 0 errors
+compiling stm32f30x_spi.c...
+..\STD\src\stm32f30x_spi.c(193): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_SPI_ALL_PERIPH(SPIx));
+..\STD\src\stm32f30x_spi.c(262): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_SPI_ALL_PERIPH(SPIx));
+..\STD\src\stm32f30x_spi.c(399): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_SPI_23_PERIPH(SPIx));
+..\STD\src\stm32f30x_spi.c(497): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_SPI_ALL_PERIPH(SPIx));
+..\STD\src\stm32f30x_spi.c(527): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_SPI_ALL_PERIPH(SPIx));
+..\STD\src\stm32f30x_spi.c(553): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_SPI_23_PERIPH_EXT(SPIx));
+..\STD\src\stm32f30x_spi.c(592): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_SPI_ALL_PERIPH(SPIx));
+..\STD\src\stm32f30x_spi.c(617): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_SPI_ALL_PERIPH(SPIx));
+..\STD\src\stm32f30x_spi.c(639): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_SPI_ALL_PERIPH(SPIx));
+..\STD\src\stm32f30x_spi.c(667): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_SPI_ALL_PERIPH(SPIx));
+..\STD\src\stm32f30x_spi.c(706): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_I2S_EXT_PERIPH(I2Sxext));
+..\STD\src\stm32f30x_spi.c(755): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_SPI_ALL_PERIPH(SPIx));
+..\STD\src\stm32f30x_spi.c(784): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_SPI_ALL_PERIPH(SPIx));
+..\STD\src\stm32f30x_spi.c(835): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_SPI_ALL_PERIPH(SPIx));
+..\STD\src\stm32f30x_spi.c(853): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_SPI_ALL_PERIPH_EXT(SPIx));
+..\STD\src\stm32f30x_spi.c(868): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_SPI_ALL_PERIPH_EXT(SPIx));
+..\STD\src\stm32f30x_spi.c(885): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_SPI_ALL_PERIPH_EXT(SPIx));
+..\STD\src\stm32f30x_spi.c(967): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_SPI_ALL_PERIPH(SPIx));
+..\STD\src\stm32f30x_spi.c(987): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_SPI_ALL_PERIPH(SPIx));
+..\STD\src\stm32f30x_spi.c(1010): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_SPI_ALL_PERIPH(SPIx));
+..\STD\src\stm32f30x_spi.c(1029): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_SPI_ALL_PERIPH(SPIx));
+..\STD\src\stm32f30x_spi.c(1054): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_SPI_ALL_PERIPH(SPIx));
+..\STD\src\stm32f30x_spi.c(1091): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_SPI_ALL_PERIPH_EXT(SPIx));
+..\STD\src\stm32f30x_spi.c(1128): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_SPI_ALL_PERIPH(SPIx));
+..\STD\src\stm32f30x_spi.c(1229): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_SPI_ALL_PERIPH_EXT(SPIx));
+..\STD\src\stm32f30x_spi.c(1302): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_SPI_ALL_PERIPH_EXT(SPIx));
+..\STD\src\stm32f30x_spi.c(1337): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_SPI_ALL_PERIPH_EXT(SPIx));
+..\STD\src\stm32f30x_spi.c(1364): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_SPI_ALL_PERIPH_EXT(SPIx));
+..\STD\src\stm32f30x_spi.c: 28 warnings, 0 errors
+compiling stm32f30x_syscfg.c...
+..\STD\src\stm32f30x_syscfg.c(139): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_SYSCFG_MEMORY_REMAP(SYSCFG_MemoryRemap));
+..\STD\src\stm32f30x_syscfg.c(178): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_SYSCFG_DMA_REMAP(SYSCFG_DMARemap));
+..\STD\src\stm32f30x_syscfg.c(208): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_SYSCFG_TRIGGER_REMAP(SYSCFG_TriggerRemap));
+..\STD\src\stm32f30x_syscfg.c(238): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_SYSCFG_ENCODER_REMAP(SYSCFG_EncoderRemap));
+..\STD\src\stm32f30x_syscfg.c(264): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_FUNCTIONAL_STATE(NewState));
+..\STD\src\stm32f30x_syscfg.c(296): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_SYSCFG_I2C_FMP(SYSCFG_I2CFastModePlus));
+..\STD\src\stm32f30x_syscfg.c(328): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_FUNCTIONAL_STATE(NewState));
+..\STD\src\stm32f30x_syscfg.c(356): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_EXTI_PORT_SOURCE(EXTI_PortSourceGPIOx));
+..\STD\src\stm32f30x_syscfg.c(378): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_SYSCFG_LOCK_CONFIG(SYSCFG_Break));
+..\STD\src\stm32f30x_syscfg.c(406): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_SYSCFG_PAGE(SYSCFG_SRAMWRP));
+..\STD\src\stm32f30x_syscfg.c(424): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_SYSCFG_FLAG(SYSCFG_Flag));
+..\STD\src\stm32f30x_syscfg.c(451): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_SYSCFG_FLAG(SYSCFG_Flag));
+..\STD\src\stm32f30x_syscfg.c: 12 warnings, 0 errors
+compiling stm32f30x_tim.c...
+..\STD\src\stm32f30x_tim.c(202): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_ALL_PERIPH(TIMx)); 
+..\STD\src\stm32f30x_tim.c(272): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_ALL_PERIPH(TIMx)); 
+..\STD\src\stm32f30x_tim.c(342): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_ALL_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(367): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST3_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(391): warning:  #223-D: function "assert_param" declared implicitly
+     assert_param(IS_TIM_ALL_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(406): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_ALL_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(420): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_ALL_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(434): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_ALL_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(450): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_ALL_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(479): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_ALL_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(505): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_ALL_PERIPH(TIMx)); 
+..\STD\src\stm32f30x_tim.c(530): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_ALL_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(557): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_ALL_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(580): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST1_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(601): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_ALL_PERIPH(TIMx)); 
+..\STD\src\stm32f30x_tim.c(681): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST1_PERIPH(TIMx)); 
+..\STD\src\stm32f30x_tim.c(761): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST2_PERIPH(TIMx)); 
+..\STD\src\stm32f30x_tim.c(842): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST3_PERIPH(TIMx)); 
+..\STD\src\stm32f30x_tim.c(922): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST3_PERIPH(TIMx)); 
+..\STD\src\stm32f30x_tim.c(987): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST4_PERIPH(TIMx)); 
+..\STD\src\stm32f30x_tim.c(1051): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST4_PERIPH(TIMx)); 
+..\STD\src\stm32f30x_tim.c(1113): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST4_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(1139): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST4_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(1166): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST4_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(1235): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST1_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(1278): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST1_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(1294): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST2_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(1309): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST3_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(1324): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST3_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(1339): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST4_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(1354): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST4_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(1374): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST1_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(1403): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST2_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(1431): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST3_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(1460): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST3_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(1488): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST4_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(1516): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST4_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(1544): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST1_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(1574): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST2_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(1603): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST3_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(1632): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST3_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(1661): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST4_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(1690): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST4_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(1719): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST1_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(1750): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST2_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(1780): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST3_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(1810): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST3_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(1840): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST1_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(1870): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST2_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(1899): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST3_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(1928): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST3_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(1957): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST4_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(1986): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST4_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(2013): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST2_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(2035): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST1_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(2061): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST6_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(2089): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST2_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(2116): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST4_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(2143): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST3_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(2170): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST4_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(2197): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST3_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(2224): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST4_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(2251): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST4_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(2284): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST1_PERIPH(TIMx)); 
+..\STD\src\stm32f30x_tim.c(2314): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST6_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(2394): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST1_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(2469): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST2_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(2523): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST1_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(2538): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST2_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(2552): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST3_PERIPH(TIMx)); 
+..\STD\src\stm32f30x_tim.c(2566): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST3_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(2586): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST1_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(2611): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST2_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(2635): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST3_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(2659): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST3_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(2712): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST6_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(2741): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST4_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(2764): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST4_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(2784): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST6_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(2809): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST4_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(2852): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST6_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(2877): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST6_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(2902): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST6_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(2959): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_ALL_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(2997): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_ALL_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(3033): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_ALL_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(3076): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_ALL_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(3106): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_ALL_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(3145): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_ALL_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(3182): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST1_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(3209): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_ALL_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(3235): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST1_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(3274): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST2_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(3295): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST2_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(3326): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST2_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(3368): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST3_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(3413): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST3_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(3481): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST2_PERIPH(TIMx)); 
+..\STD\src\stm32f30x_tim.c(3522): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST7_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(3560): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST4_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(3587): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST2_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(3610): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST2_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(3643): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST3_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(3703): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST3_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(3750): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST2_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c(3806): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_TIM_LIST8_PERIPH(TIMx));
+..\STD\src\stm32f30x_tim.c: 106 warnings, 0 errors
+compiling stm32f30x_usart.c...
+..\STD\src\stm32f30x_usart.c(176): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_ALL_PERIPH(USARTx));
+..\STD\src\stm32f30x_usart.c(223): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_ALL_PERIPH(USARTx));
+..\STD\src\stm32f30x_usart.c(363): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_123_PERIPH(USARTx));
+..\STD\src\stm32f30x_usart.c(409): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_ALL_PERIPH(USARTx));
+..\STD\src\stm32f30x_usart.c(439): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_ALL_PERIPH(USARTx));
+..\STD\src\stm32f30x_usart.c(471): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_ALL_PERIPH(USARTx));
+..\STD\src\stm32f30x_usart.c(499): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_ALL_PERIPH(USARTx));
+..\STD\src\stm32f30x_usart.c(529): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_ALL_PERIPH(USARTx));
+..\STD\src\stm32f30x_usart.c(563): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_ALL_PERIPH(USARTx));
+..\STD\src\stm32f30x_usart.c(599): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_ALL_PERIPH(USARTx));
+..\STD\src\stm32f30x_usart.c(632): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_ALL_PERIPH(USARTx));
+..\STD\src\stm32f30x_usart.c(658): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_ALL_PERIPH(USARTx));
+..\STD\src\stm32f30x_usart.c(685): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_ALL_PERIPH(USARTx));
+..\STD\src\stm32f30x_usart.c(708): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_ALL_PERIPH(USARTx));
+..\STD\src\stm32f30x_usart.c(757): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_ALL_PERIPH(USARTx));
+..\STD\src\stm32f30x_usart.c(790): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_ALL_PERIPH(USARTx));
+..\STD\src\stm32f30x_usart.c(841): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_ALL_PERIPH(USARTx));
+..\STD\src\stm32f30x_usart.c(875): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_ALL_PERIPH(USARTx));
+..\STD\src\stm32f30x_usart.c(918): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_ALL_PERIPH(USARTx));
+..\STD\src\stm32f30x_usart.c(934): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_ALL_PERIPH(USARTx));
+..\STD\src\stm32f30x_usart.c(984): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_ALL_PERIPH(USARTx));
+..\STD\src\stm32f30x_usart.c(1003): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_ALL_PERIPH(USARTx));
+..\STD\src\stm32f30x_usart.c(1031): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_ALL_PERIPH(USARTx));
+..\STD\src\stm32f30x_usart.c(1051): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_ALL_PERIPH(USARTx));
+..\STD\src\stm32f30x_usart.c(1116): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_ALL_PERIPH(USARTx));
+..\STD\src\stm32f30x_usart.c(1134): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_ALL_PERIPH(USARTx));
+..\STD\src\stm32f30x_usart.c(1192): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_ALL_PERIPH(USARTx));
+..\STD\src\stm32f30x_usart.c(1273): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_123_PERIPH(USARTx));
+..\STD\src\stm32f30x_usart.c(1292): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_123_PERIPH(USARTx));
+..\STD\src\stm32f30x_usart.c(1317): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_123_PERIPH(USARTx)); 
+..\STD\src\stm32f30x_usart.c(1341): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_123_PERIPH(USARTx));
+..\STD\src\stm32f30x_usart.c(1359): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_123_PERIPH(USARTx));
+..\STD\src\stm32f30x_usart.c(1422): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_ALL_PERIPH(USARTx));
+..\STD\src\stm32f30x_usart.c(1440): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_ALL_PERIPH(USARTx));
+..\STD\src\stm32f30x_usart.c(1498): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_ALL_PERIPH(USARTx));
+..\STD\src\stm32f30x_usart.c(1525): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_ALL_PERIPH(USARTx));
+..\STD\src\stm32f30x_usart.c(1543): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_ALL_PERIPH(USARTx));
+..\STD\src\stm32f30x_usart.c(1563): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_ALL_PERIPH(USARTx));
+..\STD\src\stm32f30x_usart.c(1610): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_1234_PERIPH(USARTx));
+..\STD\src\stm32f30x_usart.c(1643): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_1234_PERIPH(USARTx));
+..\STD\src\stm32f30x_usart.c(1778): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_ALL_PERIPH(USARTx));
+..\STD\src\stm32f30x_usart.c(1830): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_ALL_PERIPH(USARTx));
+..\STD\src\stm32f30x_usart.c(1863): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_ALL_PERIPH(USARTx));
+..\STD\src\stm32f30x_usart.c(1906): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_ALL_PERIPH(USARTx));
+..\STD\src\stm32f30x_usart.c(1956): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_ALL_PERIPH(USARTx));
+..\STD\src\stm32f30x_usart.c(1989): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_ALL_PERIPH(USARTx));
+..\STD\src\stm32f30x_usart.c(2060): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_ALL_PERIPH(USARTx));
+..\STD\src\stm32f30x_usart.c: 47 warnings, 0 errors
+compiling stm32f30x_wwdg.c...
+..\STD\src\stm32f30x_wwdg.c(153): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_WWDG_PRESCALER(WWDG_Prescaler));
+..\STD\src\stm32f30x_wwdg.c(173): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_WWDG_WINDOW_VALUE(WindowValue));
+..\STD\src\stm32f30x_wwdg.c(206): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_WWDG_COUNTER(Counter));
+..\STD\src\stm32f30x_wwdg.c(238): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_WWDG_COUNTER(Counter));
+..\STD\src\stm32f30x_wwdg.c: 4 warnings, 0 errors
+compiling Buttons_STM32F3-Discovery.c...
+compiling LED_STM32F3-Discovery.c...
+compiling RTX_Conf_CM.c...
+assembling startup_stm32f303xc.s...
+compiling system_stm32f30x.c...
+linking...
+.\Objects\STM32F3.axf: Error: L6218E: Undefined symbol assert_param (referred from stm32f30x_adc.o).
+Not enough information to list image symbols.
+Finished: 1 information, 0 warning and 1 error messages.
+".\Objects\STM32F3.axf" - 1 Error(s), 495 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.4.2.0.pack
+                ::CMSIS:RTOS:1.0 (API)
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: RTOS Version: 1.0
+   * Component: CORE Version: 3.40.0
+   * Component: Keil RTX Version: 4.75.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.MDK-Middleware.6.1.1.pack
+                ::Board Support:LED:1.00 (API)
+                Keil MDK-ARM Professional Middleware for ARM Cortex-M based devices
+   * Component: LED Version: 1.00
+   * Component: Buttons Version: 1.00
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F3xx_DFP.1.1.0.pack
+                Keil::Device:Startup:1.2.0
+                STMicroelectronics STM32F3 Series Device Support and Examples
+   * Component: Startup Version: 1.2.0
+   * Component: LED Version: 1.0.0
+   * Component: Buttons Version: 1.0.0
+
+<h2>Collection of Component include folders:</h2>
+  F:\WORK\SOURSE\SORCES\STM32F3\MDK-ARM\RTE
+  C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include
+  C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS_RTX\INC
+  C:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\6.1.1\Board
+  C:\Keil_v5\ARM\PACK\Keil\STM32F3xx_DFP\1.1.0\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ::CMSIS:RTOS:1.0 (API)
+
+   * Component: ARM::CMSIS:CORE:3.40.0
+      Source file:   CMSIS\UserCodeTemplates\ARM\ITM_Retarget.c
+
+   * Component: ARM::CMSIS:RTOS:Keil RTX:4.75.0
+      Include file:  CMSIS_RTX\INC\cmsis_os.h
+      Source file:   CMSIS_RTX\Templates\RTX_Conf_CM.c
+      Include file:  CMSIS_RTX\UserCodeTemplates\osObjects.h
+      Source file:   CMSIS_RTX\UserCodeTemplates\main.c
+      Source file:   CMSIS_RTX\UserCodeTemplates\MailQueue.c
+      Source file:   CMSIS_RTX\UserCodeTemplates\MemPool.c
+      Source file:   CMSIS_RTX\UserCodeTemplates\MsgQueue.c
+      Source file:   CMSIS_RTX\UserCodeTemplates\Mutex.c
+      Source file:   CMSIS_RTX\UserCodeTemplates\Semaphore.c
+      Source file:   CMSIS_RTX\UserCodeTemplates\Thread.c
+      Source file:   CMSIS_RTX\UserCodeTemplates\Timer.c
+      Source file:   CMSIS_RTX\SRC\ARM\SVC_Table.s
+      Library file:  CMSIS_RTX\LIB\ARM\RTX_CM4.lib
+
+   * Component: ::Board Support:LED:1.00 (API)
+      Include file:  Board\Board_LED.h
+
+   * Component: ::Board Support:Buttons:1.00 (API)
+      Include file:  Board\Board_Buttons.h
+
+   * Component: Keil::Device:Startup:1.2.0
+      Source file:   Device\Source\ARM\startup_stm32f303xc.s
+      Source file:   Device\Source\system_stm32f30x.c
+      Source file:   Device\Source\ARM\STM32F3xx_OPT.s
+
+   * Component: Keil.STM32F3-Discovery::Board Support:LED:1.0.0
+      Source file:   Boards\ST\STM32F3-Discovery\Common\LED_STM32F3-Discovery.c
+
+   * Component: Keil.STM32F3-Discovery::Board Support:Buttons:1.0.0
+      Source file:   Boards\ST\STM32F3-Discovery\Common\Buttons_STM32F3-Discovery.c
+Target not created.
