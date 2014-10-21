@@ -11,3 +11,6 @@
 .\objects\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 .\objects\main.o: C:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\6.1.1\Board\Board_LED.h
 .\objects\main.o: ..\STD\inc\stm32f30x_usart.h
+.\objects\main.o: ..\STD\inc\stm32f30x_rcc.h
+.\objects\main.o: ..\STD\inc\stm32f30x_misc.h
+.\objects\main.o: ..\STD\inc\stm32f30x_gpio.h
