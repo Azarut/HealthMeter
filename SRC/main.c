@@ -198,7 +198,7 @@ void USART1_IRQHandler(void)
 			cnt = 0;
 			sms_flag = 1;
 		}
-		else if((uart_data == '#') && !sms_flag) sms_flag = 0;
+		else if((uart_data == '#') && sms_flag) sms_flag = 0;
 		
 		if(chek_flag)
 		{
@@ -215,8 +215,10 @@ void USART1_IRQHandler(void)
 			
 		}
 			
-		if(sms_flag) SMS_buffer[cnt++] = uart_data;
-    else RX_buffer[cnt++] = uart_data;
+		if(sms_flag) 
+			SMS_buffer[cnt++] = uart_data;
+    else 
+			RX_buffer[cnt++] = uart_data;
   }
 }
 void send_str(uint8_t string[], uint8_t lenghth) 
@@ -277,7 +279,7 @@ void Start_job (void const *argument)
 }
 
 void Measure_job (void const *argument)
-{
+{ static uint8_t dbg_cnt = 0;
  while(1)
  {
 	 if(new_sms_flag)
@@ -287,7 +289,6 @@ void Measure_job (void const *argument)
 		  osDelay(100);
 		  send_str(DEL_SMS, 19);
 		  osDelay(100);
-		  LED_On(4);
 		  WAIT = (SMS_buffer[3]-0x30)*1000 + (SMS_buffer[4]-0x30)*100 + (SMS_buffer[5]-0x30) * 10 + (SMS_buffer[6]-0x30);
 		  repeat_cnt = SMS_buffer[1]-0x30;
 	 }
@@ -305,6 +306,18 @@ void Measure_job (void const *argument)
 			send_str(MEASURE, 22);
       put_char(0x1A);
 		  led_state = WAIT_STATE;
+	 }
+	 if(repeat_cnt)
+	 {
+		 dbg_cnt = repeat_cnt;
+		 while(dbg_cnt--)
+		 {
+				LED_On(4);
+				osDelay(50);
+				LED_Off(4);
+			  osDelay(200);
+		 }
+	   osDelay(WAIT);
 	 }
  }
 }
