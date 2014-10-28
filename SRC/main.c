@@ -169,7 +169,12 @@ void USART2_IRQHandler(void)
 		if(uart_data_AD == 'U') AD_Cnt = 0;
 		AD_buffer[AD_Cnt++] = uart_data_AD;
 		if((AD_buffer[1] == 'U') && (AD_Cnt >= 5))
-				new_measure_flag = 1;
+		{
+				USART_ITConfig(USART2,USART_IT_PE  ,DISABLE);
+				USART_ITConfig(USART2,USART_IT_RXNE,DISABLE);
+				USART_ITConfig(USART2,USART_IT_ERR ,DISABLE);
+				new_measure_flag = 1;			
+		}
   }
 }
 
@@ -343,6 +348,9 @@ void Measure_job (void const *argument)
 		  send_str(SEND_DATA, 11);
 			send_str(MEASURE, 22);
       put_char(0x1A);
+			USART_ITConfig(USART2,USART_IT_PE  ,ENABLE);
+			USART_ITConfig(USART2,USART_IT_RXNE,ENABLE);
+			USART_ITConfig(USART2,USART_IT_ERR ,ENABLE);
 		  led_state = WAIT_STATE;
 	 }
 	 if(repeat_cnt)
@@ -383,8 +391,7 @@ void Blink_job (void const *argument)
  {
 	   switch(led_state)
 		 {
-			 case WAIT_STATE:
-											 
+			 case WAIT_STATE:											 
 											 LED_Off(RED);
 											 LED_On(GREEN);
 											 osDelay(10);

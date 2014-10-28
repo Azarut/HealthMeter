@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\STM32F3.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\STM32F3.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5050041: Last Updated: Tue Oct 28 17:35:01 2014
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5050041: Last Updated: Tue Oct 28 17:41:27 2014
 <BR><P>
 <H3>Maximum Stack Usage =        160 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -290,16 +290,17 @@ Global Symbols
 <LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_systick
 </UL>
 
-<P><STRONG><a name="[85]"></a>crc16</STRONG> (Thumb, 40 bytes, Stack size 12 bytes, main.o(.text))
+<P><STRONG><a name="[86]"></a>crc16</STRONG> (Thumb, 40 bytes, Stack size 12 bytes, main.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = crc16
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Measure_job
 </UL>
 
-<P><STRONG><a name="[32]"></a>USART2_IRQHandler</STRONG> (Thumb, 150 bytes, Stack size 8 bytes, main.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = USART2_IRQHandler &rArr; USART_ClearITPendingBit
+<P><STRONG><a name="[32]"></a>USART2_IRQHandler</STRONG> (Thumb, 184 bytes, Stack size 8 bytes, main.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = USART2_IRQHandler &rArr; USART_ITConfig
 </UL>
 <BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_ReceiveData
+<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_ITConfig
 <LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_GetFlagStatus
 <LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_ClearITPendingBit
 <LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_ClearFlag
@@ -316,20 +317,20 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f303xc.o(RESET)
 </UL>
-<P><STRONG><a name="[81]"></a>put_char</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, main.o(.text))
+<P><STRONG><a name="[82]"></a>put_char</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, main.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = put_char
 </UL>
-<BR>[Calls]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_SendData
+<BR>[Calls]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_SendData
 <LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_GetFlagStatus
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Measure_job
-<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send_str
+<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send_str
 </UL>
 
-<P><STRONG><a name="[83]"></a>send_str</STRONG> (Thumb, 26 bytes, Stack size 16 bytes, main.o(.text))
+<P><STRONG><a name="[84]"></a>send_str</STRONG> (Thumb, 26 bytes, Stack size 16 bytes, main.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = send_str &rArr; put_char
 </UL>
-<BR>[Calls]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;put_char
+<BR>[Calls]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;put_char
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Measure_job
 <LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Start_job
@@ -338,48 +339,49 @@ Global Symbols
 <P><STRONG><a name="[5e]"></a>Start_job</STRONG> (Thumb, 220 bytes, Stack size 0 bytes, main.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = Start_job &rArr; send_str &rArr; put_char
 </UL>
-<BR>[Calls]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osDelay
-<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send_str
+<BR>[Calls]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osDelay
+<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send_str
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> main.o(.constdata)
 </UL>
-<P><STRONG><a name="[5f]"></a>Measure_job</STRONG> (Thumb, 530 bytes, Stack size 0 bytes, main.o(.text))
+<P><STRONG><a name="[5f]"></a>Measure_job</STRONG> (Thumb, 564 bytes, Stack size 0 bytes, main.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = Measure_job &rArr; send_str &rArr; put_char
 </UL>
-<BR>[Calls]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osDelay
-<LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_On
-<LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_Off
-<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send_str
-<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;put_char
-<LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;crc16
+<BR>[Calls]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osDelay
+<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_ITConfig
+<LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_On
+<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_Off
+<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send_str
+<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;put_char
+<LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;crc16
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> main.o(.constdata)
 </UL>
 <P><STRONG><a name="[60]"></a>Repeat_job</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, main.o(.text))
-<BR><BR>[Calls]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osDelay
+<BR><BR>[Calls]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osDelay
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> main.o(.constdata)
 </UL>
 <P><STRONG><a name="[61]"></a>Blink_job</STRONG> (Thumb, 496 bytes, Stack size 0 bytes, main.o(.text))
-<BR><BR>[Calls]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osDelay
-<LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_On
-<LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_Off
+<BR><BR>[Calls]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osDelay
+<LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_On
+<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_Off
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> main.o(.constdata)
 </UL>
-<P><STRONG><a name="[88]"></a>USART_Ini</STRONG> (Thumb, 490 bytes, Stack size 40 bytes, main.o(.text))
+<P><STRONG><a name="[89]"></a>USART_Ini</STRONG> (Thumb, 494 bytes, Stack size 40 bytes, main.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = USART_Ini &rArr; USART_Init &rArr; RCC_GetClocksFreq
 </UL>
-<BR>[Calls]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Init
-<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_ITConfig
-<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Cmd
-<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB2PeriphClockCmd
-<LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB1PeriphClockCmd
-<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_AHBPeriphClockCmd
-<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_PriorityGroupConfig
-<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_Init
-<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_PinAFConfig
-<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Init
+<BR>[Calls]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Init
+<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_ITConfig
+<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Cmd
+<LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB2PeriphClockCmd
+<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB1PeriphClockCmd
+<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_AHBPeriphClockCmd
+<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_PriorityGroupConfig
+<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_Init
+<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_PinAFConfig
+<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -397,7 +399,7 @@ Global Symbols
 <LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemInit
 <LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_Initialize
 <LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_init
-<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Ini
+<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Ini
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> rtx_conf_cm.o(.data)
 </UL>
@@ -405,10 +407,10 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_AHBPeriphResetCmd
 </UL>
 
-<P><STRONG><a name="[8c]"></a>GPIO_Init</STRONG> (Thumb, 144 bytes, Stack size 20 bytes, stm32f30x_gpio.o(.text))
+<P><STRONG><a name="[8d]"></a>GPIO_Init</STRONG> (Thumb, 144 bytes, Stack size 20 bytes, stm32f30x_gpio.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = GPIO_Init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Ini
+<BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Ini
 </UL>
 
 <P><STRONG><a name="[fc]"></a>GPIO_StructInit</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, stm32f30x_gpio.o(.text), UNUSED)
@@ -431,20 +433,20 @@ Global Symbols
 
 <P><STRONG><a name="[105]"></a>GPIO_Write</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32f30x_gpio.o(.text), UNUSED)
 
-<P><STRONG><a name="[8d]"></a>GPIO_PinAFConfig</STRONG> (Thumb, 70 bytes, Stack size 20 bytes, stm32f30x_gpio.o(.text))
+<P><STRONG><a name="[8e]"></a>GPIO_PinAFConfig</STRONG> (Thumb, 70 bytes, Stack size 20 bytes, stm32f30x_gpio.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = GPIO_PinAFConfig
 </UL>
-<BR>[Called By]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Ini
+<BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Ini
 </UL>
 
-<P><STRONG><a name="[90]"></a>NVIC_PriorityGroupConfig</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, stm32f30x_misc.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Ini
+<P><STRONG><a name="[91]"></a>NVIC_PriorityGroupConfig</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, stm32f30x_misc.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Ini
 </UL>
 
-<P><STRONG><a name="[91]"></a>NVIC_Init</STRONG> (Thumb, 100 bytes, Stack size 16 bytes, stm32f30x_misc.o(.text))
+<P><STRONG><a name="[92]"></a>NVIC_Init</STRONG> (Thumb, 100 bytes, Stack size 16 bytes, stm32f30x_misc.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = NVIC_Init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Ini
+<BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Ini
 </UL>
 
 <P><STRONG><a name="[106]"></a>NVIC_SetVectorTable</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, stm32f30x_misc.o(.text), UNUSED)
@@ -498,7 +500,7 @@ Global Symbols
 <P><STRONG><a name="[9c]"></a>RCC_GetClocksFreq</STRONG> (Thumb, 1116 bytes, Stack size 24 bytes, stm32f30x_rcc.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = RCC_GetClocksFreq
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Init
+<BR>[Called By]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Init
 </UL>
 
 <P><STRONG><a name="[11a]"></a>RCC_ADCCLKConfig</STRONG> (Thumb, 44 bytes, Stack size 0 bytes, stm32f30x_rcc.o(.text), UNUSED)
@@ -519,16 +521,16 @@ Global Symbols
 
 <P><STRONG><a name="[122]"></a>RCC_BackupResetCmd</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, stm32f30x_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[89]"></a>RCC_AHBPeriphClockCmd</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, stm32f30x_rcc.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Ini
+<P><STRONG><a name="[8a]"></a>RCC_AHBPeriphClockCmd</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, stm32f30x_rcc.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Ini
 </UL>
 
-<P><STRONG><a name="[8a]"></a>RCC_APB2PeriphClockCmd</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, stm32f30x_rcc.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Ini
+<P><STRONG><a name="[8b]"></a>RCC_APB2PeriphClockCmd</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, stm32f30x_rcc.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Ini
 </UL>
 
-<P><STRONG><a name="[8b]"></a>RCC_APB1PeriphClockCmd</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, stm32f30x_rcc.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Ini
+<P><STRONG><a name="[8c]"></a>RCC_APB1PeriphClockCmd</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, stm32f30x_rcc.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Ini
 </UL>
 
 <P><STRONG><a name="[96]"></a>RCC_AHBPeriphResetCmd</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, stm32f30x_rcc.o(.text), UNUSED)
@@ -556,12 +558,12 @@ Global Symbols
 <LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB1PeriphResetCmd
 </UL>
 
-<P><STRONG><a name="[8e]"></a>USART_Init</STRONG> (Thumb, 220 bytes, Stack size 88 bytes, stm32f30x_usart.o(.text))
+<P><STRONG><a name="[8f]"></a>USART_Init</STRONG> (Thumb, 220 bytes, Stack size 88 bytes, stm32f30x_usart.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = USART_Init &rArr; RCC_GetClocksFreq
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_GetClocksFreq
 </UL>
-<BR>[Called By]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Ini
+<BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Ini
 </UL>
 
 <P><STRONG><a name="[127]"></a>USART_StructInit</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, stm32f30x_usart.o(.text), UNUSED)
@@ -570,8 +572,8 @@ Global Symbols
 
 <P><STRONG><a name="[129]"></a>USART_ClockStructInit</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, stm32f30x_usart.o(.text), UNUSED)
 
-<P><STRONG><a name="[8f]"></a>USART_Cmd</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, stm32f30x_usart.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Ini
+<P><STRONG><a name="[90]"></a>USART_Cmd</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, stm32f30x_usart.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Ini
 </UL>
 
 <P><STRONG><a name="[12a]"></a>USART_DirectionModeCmd</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f30x_usart.o(.text), UNUSED)
@@ -602,8 +604,8 @@ Global Symbols
 
 <P><STRONG><a name="[137]"></a>USART_AutoBaudRateConfig</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, stm32f30x_usart.o(.text), UNUSED)
 
-<P><STRONG><a name="[82]"></a>USART_SendData</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, stm32f30x_usart.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;put_char
+<P><STRONG><a name="[83]"></a>USART_SendData</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, stm32f30x_usart.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;put_char
 </UL>
 
 <P><STRONG><a name="[80]"></a>USART_ReceiveData</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, stm32f30x_usart.o(.text))
@@ -651,10 +653,12 @@ Global Symbols
 
 <P><STRONG><a name="[14b]"></a>USART_DMAReceptionErrorConfig</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, stm32f30x_usart.o(.text), UNUSED)
 
-<P><STRONG><a name="[92]"></a>USART_ITConfig</STRONG> (Thumb, 58 bytes, Stack size 20 bytes, stm32f30x_usart.o(.text))
+<P><STRONG><a name="[81]"></a>USART_ITConfig</STRONG> (Thumb, 58 bytes, Stack size 20 bytes, stm32f30x_usart.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = USART_ITConfig
 </UL>
-<BR>[Called By]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Ini
+<BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Ini
+<LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Measure_job
+<LI><a href="#[32]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART2_IRQHandler
 </UL>
 
 <P><STRONG><a name="[14c]"></a>USART_RequestCmd</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f30x_usart.o(.text), UNUSED)
@@ -662,7 +666,7 @@ Global Symbols
 <P><STRONG><a name="[14d]"></a>USART_OverrunDetectionConfig</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, stm32f30x_usart.o(.text), UNUSED)
 
 <P><STRONG><a name="[7e]"></a>USART_GetFlagStatus</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f30x_usart.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;put_char
+<BR><BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;put_char
 <LI><a href="#[31]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART1_IRQHandler
 <LI><a href="#[32]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART2_IRQHandler
 </UL>
@@ -681,13 +685,13 @@ Global Symbols
 <LI><a href="#[32]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART2_IRQHandler
 </UL>
 
-<P><STRONG><a name="[87]"></a>LED_Off</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, led_stm32f3-discovery.o(.text))
+<P><STRONG><a name="[88]"></a>LED_Off</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, led_stm32f3-discovery.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Blink_job
 <LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Measure_job
 <LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_SetOut
 </UL>
 
-<P><STRONG><a name="[86]"></a>LED_On</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, led_stm32f3-discovery.o(.text))
+<P><STRONG><a name="[87]"></a>LED_On</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, led_stm32f3-discovery.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Blink_job
 <LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Measure_job
 <LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_SetOut
@@ -696,8 +700,8 @@ Global Symbols
 <P><STRONG><a name="[9d]"></a>LED_SetOut</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, led_stm32f3-discovery.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = LED_SetOut
 </UL>
-<BR>[Calls]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_On
-<LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_Off
+<BR>[Calls]<UL><LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_On
+<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_Off
 </UL>
 <BR>[Called By]<UL><LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_Initialize
 </UL>
@@ -1068,7 +1072,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;isrMessagePut
 </UL>
 
-<P><STRONG><a name="[84]"></a>osDelay</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, rt_cmsis.o(i.osDelay))
+<P><STRONG><a name="[85]"></a>osDelay</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, rt_cmsis.o(i.osDelay))
 <BR><BR>[Called By]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Blink_job
 <LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Repeat_job
 <LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Measure_job
