@@ -30,11 +30,18 @@ osThreadDef (sample_name, osPriorityNormal, 1, 0);       // thread object
 */
 extern void Start_job (void const *argument);          // thread function
 extern void Measure_job (void const *argument);          // thread function
+extern void Repeat_job (void const *argument);          // thread function
+extern void Blink_job (void const *argument);          // thread functio
 
 osThreadId tid_Start_job;                              // thread id
 osThreadId tid_Measure_job;                              // thread id
+osThreadId tid_Repeat_job;                              // thread id
+osThreadId tid_Blink_job;                              // thread id
+
 osThreadDef (Start_job, osPriorityNormal, 1, 0);       // thread object
 osThreadDef (Measure_job, osPriorityNormal, 1, 0);       // thread object
+osThreadDef (Repeat_job, osPriorityNormal, 1, 0);       // thread object
+osThreadDef (Blink_job, osPriorityNormal, 1, 0);       // thread object
 // global 'semaphores' ----------------------------------------------------------
 /* 
 Example:
