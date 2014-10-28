@@ -1,4 +1,5 @@
 .\objects\main.o: ..\SRC\main.c
+.\objects\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 .\objects\main.o: ..\CMSIS\Device\ST\STM32F30x\Include\stm32f30x.h
 .\objects\main.o: ..\CMSIS\Include\core_cm4.h
 .\objects\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h

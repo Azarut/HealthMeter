@@ -1,7 +1,7 @@
 /*----------------------------------------------------------------------------
  * CMSIS-RTOS 'main' function template
  *---------------------------------------------------------------------------*/
-
+#include <string.h>
 #define osObjectsPublic                     // define objects in main module
 #include "stm32f30x.h"
 #include "osObjects.h"                      // RTOS object definitions
@@ -28,6 +28,16 @@ volatile uint8_t led_state = 7;
 void GPIO_init(void);
 void put_char(char c);
 
+/*      AD переменные          */
+int16_t  Version = 0x0003;
+int32_t  TransmitterID = 123456789;
+int16_t  MessageType = 3;
+int16_t  DataType = 3082;
+uint32_t DeltaTime = 2000;
+uint16_t SystolicPressure = 141;
+uint16_t DiastolicPressure = 97;
+uint16_t Pulse = 88;
+/*******************************/
 
 /*Cкорость мигания светодиодов */
 uint16_t WAIT = 5000;
@@ -48,7 +58,7 @@ uint8_t new_measure_flag = 0;
 /*******************************/
 
 uint8_t repeat_cnt = 0;
-
+uint8_t err_cnt = 0;
 /*    АТ-комманды SIM800       */
 uint8_t ECHO[5] = "ATE0\r"; 
 uint8_t SET_SMS_OP_1[10] = "AT+CMGF=1\r"; 
@@ -72,6 +82,7 @@ uint8_t AD_buffer[255] = {0};
 uint8_t SMS_buffer[64] = {0};
 uint8_t check_buffer[6] = {0};
 uint8_t MEASURE[22] = {0};
+uint8_t aMeasBuffer[6];
 /*******************************/
 
 #define CRC16_INITIAL_REMAINDER 0x0000
@@ -124,6 +135,8 @@ uint16_t crc16(const void * const message, const uint16_t nBytes) {
 
     return (remainder ^ CRC16_FINAL_XOR_VALUE);
 }
+
+
 void USART2_IRQHandler(void) 
 { uint8_t uart_data_AD = 0; static uint8_t AD_Cnt = 0; 
 // Recognizing the interrupt event
@@ -153,7 +166,10 @@ void USART2_IRQHandler(void)
   {
     // Push a new data into the receiver buffer
     uart_data_AD = USART_ReceiveData(USART2);
+		if(uart_data_AD == 'U') AD_Cnt = 0;
 		AD_buffer[AD_Cnt++] = uart_data_AD;
+		if((AD_buffer[1] == 'U') && (AD_Cnt >= 5))
+				new_measure_flag = 1;
   }
 }
 
@@ -200,6 +216,8 @@ void USART1_IRQHandler(void)
 		}
 		else if((uart_data == '#') && sms_flag) sms_flag = 0;
 		
+
+		
 		if(chek_flag)
 		{
 		  check_buffer[sec_cnt++] = uart_data;
@@ -219,6 +237,13 @@ void USART1_IRQHandler(void)
 			SMS_buffer[cnt++] = uart_data;
     else 
 			RX_buffer[cnt++] = uart_data;
+		if(RX_buffer[3] == 'S') need_setup = 1;
+	  if(uart_data == 10)
+			cnt = 0;
+		if(RX_buffer[0] == 'E')
+			err_cnt++;
+		else err_cnt = 0;
+		if(err_cnt > 3) led_state = RPT_BAD;
   }
 }
 void send_str(uint8_t string[], uint8_t lenghth) 
@@ -272,14 +297,14 @@ void Start_job (void const *argument)
 		  osDelay(1000);
 	    send_str(SRV_CONNECT, 42);
 		  osDelay(3000);
-			led_state = WAIT_STATE;
+			if(err_cnt < 3) led_state = WAIT_STATE;
 	 }
 	 osDelay(1000);
  }
 }
 
 void Measure_job (void const *argument)
-{ static uint8_t dbg_cnt = 0;
+{ static uint8_t dbg_cnt = 0; uint8_t i = 0;
  while(1)
  {
 	 if(new_sms_flag)
@@ -296,9 +321,22 @@ void Measure_job (void const *argument)
 	 {
 			led_state = SND_GOOD;
 		  new_measure_flag = 0;
-		 	MEASURE[15]++;
-			MEASURE[17]++;
-			MEASURE[19]++;
+			for(i=0;i<=5;i++)
+			{
+				if(AD_buffer[2*i+1] > 0x040)
+					aMeasBuffer[i] = (AD_buffer[2*i+1] - 0x37) << 4;
+				else	
+					aMeasBuffer[i] = (AD_buffer[2*i+1] - 0x30) << 4;
+				
+				if(AD_buffer[2*i+2] > 0x040)
+					aMeasBuffer[i] += AD_buffer[2*i+2] - 0x37;
+				else
+					aMeasBuffer[i] += AD_buffer[2*i+2] - 0x30;
+			}
+		
+			MEASURE[15] = aMeasBuffer[1] + aMeasBuffer[2];
+			MEASURE[17] = aMeasBuffer[2];
+			MEASURE[19] = aMeasBuffer[3];
 			CRC_calc = crc16((uint32_t*)MEASURE, 20);
 			MEASURE[21] = (uint8_t)CRC_calc;
 			MEASURE[20] = CRC_calc >> 8;
@@ -319,6 +357,7 @@ void Measure_job (void const *argument)
 		 }
 	   osDelay(WAIT);
 	 }
+	 osDelay(1000);
  }
 }
 
@@ -345,6 +384,7 @@ void Blink_job (void const *argument)
 	   switch(led_state)
 		 {
 			 case WAIT_STATE:
+											 
 											 LED_Off(RED);
 											 LED_On(GREEN);
 											 osDelay(10);
@@ -450,6 +490,7 @@ void USART_Ini(void)
 	RCC_AHBPeriphClockCmd(RCC_AHBPeriph_GPIOC, ENABLE);
 	RCC_AHBPeriphClockCmd(RCC_AHBPeriph_GPIOA, ENABLE);
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_USART1, ENABLE);
+	RCC_APB1PeriphClockCmd(RCC_APB1Periph_USART2, ENABLE);
 	
 	/*Настраиваем порты USART1*/
 	GPIO_InitStruct.GPIO_Pin = GPIO_Pin_4;
@@ -534,6 +575,20 @@ int main (void)
 	LED_Initialize();
 	GPIO_init();
 	USART_Ini();
+	MEASURE[1] = (uint8_t)Version;
+	MEASURE[0] = Version >> 8;
+	MEASURE[5] = (uint8_t)TransmitterID;
+	MEASURE[4] = TransmitterID >> 8;
+	MEASURE[3] = TransmitterID >> 16;
+	MEASURE[2] = TransmitterID >> 24;
+	MEASURE[7] = (uint8_t)MessageType;
+	MEASURE[6] = MessageType >> 8;
+	MEASURE[9] = (uint8_t)DataType;
+	MEASURE[8] = DataType >> 8;
+	MEASURE[13] = (uint8_t)DeltaTime;
+	MEASURE[12] = DeltaTime >> 8;
+	MEASURE[11] = DeltaTime >> 16;
+	MEASURE[10] = DeltaTime >> 24;
   tid_Start_job = osThreadCreate (osThread(Start_job), NULL);
 	tid_Measure_job = osThreadCreate (osThread(Measure_job), NULL);
 	tid_Repeat_job = osThreadCreate (osThread(Repeat_job), NULL);
